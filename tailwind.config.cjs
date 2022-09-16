@@ -6,6 +6,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        "sm": "660px",
+        "smd": "866px",
+      },
       colors: {
         background: "#000",
         text_color: "#FFF",
