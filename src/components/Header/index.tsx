@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 
 import logo_desktop from "../../assets/logo-desktop.svg";
 import menu_open from "../../assets/menu-buguer-open.svg";
+import menu_close from "../../assets/menu-buguer-close.svg";
 
 export function Header() {
+  const [nav, setNav] = useState(false);
+
+  function handleNav() {
+    setNav(!nav);
+    console.log(nav);
+  }
+
   return (
-    <div className="w-full h-24 flex items-center justify-between px-20 py-8 z-50 fixed top-0 left-0">
+    <div className="w-full h-24 flex items-center justify-between px-20 py-8 z-50 fixed top-0 left-0 border-b border-border_menu_mobile smd:border-none">
       <img className="w-12" src={logo_desktop} alt="logo da rocketseat" />
 
       <ul className="smd:flex items-center gap-8 hidden">
@@ -24,8 +32,51 @@ export function Header() {
         PEGAR MEU CAFÉ
       </button>
 
-      <div className="smd:hidden">
-        <img src={menu_open} alt="" />
+      <button className="smd:hidden transition-all duration-300 hover:scale-110" onClick={handleNav}>
+        {nav ? (
+          <img src={menu_close} alt="" />
+        ) : (
+          <img src={menu_open} alt="" />
+        )}
+      </button>
+
+      <div className={
+        nav ? "fixed left-0 top-24 w-[100%] h-screen smd:hidden bg-background ease-in duration-500"
+          : "fixed left-[-100%] top-24 ease-in duration-500"
+      }>
+
+        <ul className="flex flex-col">
+          <li className="bg-background h-16 border-b border-border_menu_mobile">
+            <div className="border-l-4 border-button h-full flex items-center pl-8">
+              <a href="#" className="text-text_color_menu_mobile font-bold">Home</a>
+            </div>
+          </li>
+
+          <li className="bg-background h-16 border-b border-border_menu_mobile">
+            <div className="border-l-4 border-transparent h-full flex items-center pl-8">
+              <a href="#" className="text-border_menu_mobile">Menu</a>
+            </div>
+          </li>
+
+          <li className="bg-background h-16 border-b border-border_menu_mobile">
+            <div className="border-l-4 border-transparent h-full flex items-center pl-8">
+              <a href="#" className="text-border_menu_mobile">Recompensas</a>
+            </div>
+          </li>
+
+          <li className="bg-background h-16 border-b border-border_menu_mobile">
+            <div className="border-l-4 border-transparent h-full flex items-center pl-8">
+              <a href="#" className="text-border_menu_mobile">Gift Cards</a>
+            </div>
+          </li>
+
+          <li className="bg-background h-16 border-b border-border_menu_mobile">
+            <div className="border-l-4 border-transparent h-full flex items-center pl-8">
+              <a href="#" className="text-border_menu_mobile">Lojas</a>
+            </div>
+          </li>
+        </ul>
+
       </div>
     </div>
 
