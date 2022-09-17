@@ -9,5 +9,9 @@
 }
 
 body{
-  @apply text-white
+  @apply text-white font-manrope bg-background
+}
+
+.tshadow{
+  text-shadow: -1px -1px 0 #8257E5, 1px -1px 0 #8257E5, -1px 1px 0 #8257E5, 1px 1px 0 #8257E5;
 }

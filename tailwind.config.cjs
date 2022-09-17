@@ -18,8 +18,11 @@ module.exports = {
         border: "#29292E",
         border_menu_mobile: "#A8A8B3",
         text_color_menu_mobile: "#E1E1E6",
-      }
+      },
     },
+    fontFamily: {
+      manrope: ["'Manrope'", "sans-serif"],
+    }
   },
   plugins: [],
 };

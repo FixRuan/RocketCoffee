@@ -4,6 +4,8 @@ import logo_desktop from "../../assets/logo-desktop.svg";
 import menu_open from "../../assets/menu-buguer-open.svg";
 import menu_close from "../../assets/menu-buguer-close.svg";
 
+import blur2 from "../../assets/blur-2.png";
+
 export function Header() {
   const [nav, setNav] = useState(false);
 
@@ -13,8 +15,9 @@ export function Header() {
   }
 
   return (
-    <div className="w-full h-24 flex items-center justify-between px-20 py-8 z-50 fixed top-0 left-0 border-b border-border_menu_mobile smd:border-none">
+    <div className="w-full h-24 mb-24 flex items-center justify-between px-20 py-8 fixed top-0 left-0 border-b border-border_menu_mobile smd:border-none z-50">
       <img className="w-12" src={logo_desktop} alt="logo da rocketseat" />
+      <img className="hidden smd:block absolute top-0 right-0 select-none" src={blur2} alt="blur-2" />
 
       <ul className="smd:flex items-center gap-8 hidden">
         <li><a href="#">Home</a></li>
