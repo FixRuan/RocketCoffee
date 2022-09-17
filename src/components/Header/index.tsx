@@ -1,6 +1,7 @@
 import React from "react";
 
 import logo_desktop from "../../assets/logo-desktop.svg";
+import menu_open from "../../assets/menu-buguer-open.svg";
 
 export function Header() {
   return (
@@ -23,7 +24,9 @@ export function Header() {
         PEGAR MEU CAFÉ
       </button>
 
-      <div className="smd:hidden">MENU</div>
+      <div className="smd:hidden">
+        <img src={menu_open} alt="" />
+      </div>
     </div>
 
   );
