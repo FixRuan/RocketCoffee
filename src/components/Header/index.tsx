@@ -15,9 +15,9 @@ export function Header() {
   }
 
   return (
-    <div className="w-full h-24 mb-24 flex items-center justify-between px-20 py-8 fixed top-0 left-0 border-b border-border_menu_mobile smd:border-none z-50">
+    <div className="w-full h-24 mb-24 flex items-center justify-between px-20 py-8 fixed top-0 left-0 border-b border-border_menu_mobile smd:border-none z-50 bg-background">
       <img className="w-12" src={logo_desktop} alt="logo da rocketseat" />
-      <img className="hidden smd:block absolute top-0 right-0 select-none" src={blur2} alt="blur-2" />
+      <img className="hidden smd:block absolute top-0 right-0 select-none -z-10" src={blur2} alt="blur-2" />
 
       <ul className="smd:flex items-center gap-8 hidden">
         <li><a href="#">Home</a></li>
